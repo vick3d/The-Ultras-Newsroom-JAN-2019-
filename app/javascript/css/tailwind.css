@@ -23,3 +23,24 @@ h1 {
     grid-column-gap: 50px;
     @apply justify-center mt-6;
 }
+
+.StripeElement {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    width: 100%;
+    padding-top: 8px;
+    padding-top: 0.5rem;
+    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem;
+    color: #606f7b;
+    line-height: 1.25;
+  }

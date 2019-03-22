@@ -8,4 +8,8 @@ end
 
 Then("I should not see {string}") do |content|
     expect(page).to have_no_content content
-end  
+end 
+
+Then("I wait {int} seconds") do |int|
+	sleep int
+end

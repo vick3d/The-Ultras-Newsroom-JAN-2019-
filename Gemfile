@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'tailwindcss', '~> 0.2.0'
 gem 'devise'
+gem 'stripe'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -25,6 +26,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'coveralls', require: false
+  gem 'chromedriver-helper'
+	gem 'selenium-webdriver'
+  gem 'stripe-ruby-mock', '~> 2.5.6', :require => 'stripe_mock'
 end
 
 group :development do
