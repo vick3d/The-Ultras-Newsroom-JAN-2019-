@@ -14,7 +14,7 @@
   <body>
     <%= link_to_unless_current "English", locale: 'en' %>
     <%= link_to_unless_current "Svenska", locale: 'sv' %>
-    <%= link_to "Subscribe", subscriptions_path %>
+    <%= link_to "Subscribe", new_subscription_path %>
     <%= notice || alert %>
     <%= yield %>
     <% if user_signed_in? %>

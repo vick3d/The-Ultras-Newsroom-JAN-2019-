@@ -1,7 +1,7 @@
 class SubscriptionsController < ApplicationController
   before_action :mock_stripe_in_test
   
-  def index
+  def new
   end
 
   def create
@@ -10,7 +10,7 @@ class SubscriptionsController < ApplicationController
       source: stripe_token(params),
       description: 'premium subscription'
     )
-
+  
     charge = Stripe::Charge.create(
       customer: customer.id,
       amount: 10_000,
@@ -22,7 +22,6 @@ class SubscriptionsController < ApplicationController
       redirect_to root_path, notice: "You have successfully subscribed!"
     else
       redirect_to subscriptions_path, notice: "Something went very wrong!"
-  
     end
   end
 

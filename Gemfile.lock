@@ -270,6 +270,10 @@ GEM
     stripe (4.10.0)
       faraday (~> 0.13)
       net-http-persistent (~> 3.0)
+    stripe-rails (1.6.1)
+      rails (>= 3)
+      responders
+      stripe (>= 1.36.2)
     stripe-ruby-mock (2.5.6)
       dante (>= 0.2.0)
       multi_json (~> 1.0)
@@ -334,7 +338,7 @@ DEPENDENCIES
   shoulda-matchers
   spring
   spring-watcher-listen (~> 2.0.0)
-  stripe
+  stripe-rails
   stripe-ruby-mock (~> 2.5.6)
   tailwindcss (~> 0.2.0)
   turbolinks (~> 5)

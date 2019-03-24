@@ -29,6 +29,9 @@ module TheUltrasNewsRoomJan2019
       generate.controller_specs false
       generate.system_tests false
     end
+    config.stripe.secret_key = 'sk_test_eo7seUy2UzwSpPXq2q7341vP00g3k2fSTA'
+    config.stripe.publishable_key = 'pk_test_zARpoHaZOl2LQLtr0YOthxBm0097GcQG8Q'
+    config.stripe.endpoint = '/payment/stripe-integration'
     config.i18n.available_locales = [:sv, :en]
     config.i18n.default_locale = :en
     config.generators.system_tests = nil
