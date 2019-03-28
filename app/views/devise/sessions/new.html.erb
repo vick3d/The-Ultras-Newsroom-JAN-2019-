@@ -1,0 +1,36 @@
+<h2 class="text-center">Log in</h2>
+<div class="border-b border-grey-light p-4 flex justify-center p-8">
+  <div class="w-full max-w-xs">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource =%>
+    <div class="mb-6">
+      <div class="">
+        <label class="block text-black font-bold mb-1 pr-4" for="inline-full-name">
+          <%= f.label :email %><br />
+        </label>    
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-grey" %>
+      </div>
+    </div>
+    <div class="mb-6">
+      <div class="">
+        <label class="block text-black font-bold mb-1 pr-4" for="inline-username">
+          <%= f.label :password %><br />
+        </label>
+          <%= f.password_field :password, autocomplete: "current-password", class: "bg-grey-lighter appearance-none border-2 border-grey-lighter rounded w-full py-2 px-4 text-grey-darker leading-tight focus:outline-none focus:bg-white focus:border-grey" %>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <button class="">
+        <%= f.submit "Log in", class: "text-center shadow bg-black hover:bg-grey-darker focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" %>
+      </button>
+    </div>
+    <div class="p-2">
+      <%= render "devise/shared/links", class: "inline-block align-baseline font-bold text-sm text-blue hover:text-blue-darker"%>
+    </div>
+    <% end %>   
+  </div>  
+</div>
+
+
+  
+
