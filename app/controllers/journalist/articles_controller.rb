@@ -22,6 +22,8 @@ class Journalist::ArticlesController < ApplicationController
 
     def update
         if @article.update(article_params)
+            @article.approved = false
+            @article.save
             redirect_to journalist_article_path, notice: 'Article was successfully updated.'
         else
             redirect_to @article, notice: 'Article was not updated.'

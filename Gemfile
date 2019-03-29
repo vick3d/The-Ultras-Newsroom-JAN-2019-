@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'tailwindcss', '~> 0.2.0'
 gem 'devise'
+gem 'stripe-rails'
+gem 'rack-cors', require: 'rack/cors'
+gem 'devise_token_auth'
 gem "aws-sdk-s3", require: false
 
 group :development, :test do
@@ -29,6 +32,7 @@ group :development, :test do
   gem 'chromedriver-helper'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'stripe-ruby-mock', '~> 2.5.6', require: 'stripe_mock'
 end
 
 group :development do

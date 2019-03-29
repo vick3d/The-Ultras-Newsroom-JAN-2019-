@@ -18,7 +18,7 @@ end
 
 Capybara.register_driver :selenium do |app|
   options = Selenium::WebDriver::Chrome::Options.new(
-      args: %w( headless disable-popup-blocking disable-infobars)
+      args: %w( disable-popup-blocking disable-infobars)
   )
 
   Capybara::Selenium::Driver.new(
@@ -27,4 +27,17 @@ Capybara.register_driver :selenium do |app|
       options: options
   )
 end
+
 Capybara.javascript_driver = :selenium
+
+Before '@stripe' do
+	StripeMock.start
+end
+
+Before '@stripe_error_cvc' do
+  StripeMock.prepare_card_error(:incorrect_cvc)
+end
+
+After '@stripe' do
+	StripeMock.stop
+end 

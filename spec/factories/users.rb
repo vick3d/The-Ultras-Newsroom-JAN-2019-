@@ -1,14 +1,14 @@
 FactoryBot.define do
   factory :user do
-    email { 'jocke@craft.se' }
+    sequence(:email) { |n| "user_#{n}@factory.com" }
     password { 'string' }
     factory :visitor do
       role { 0 }
-      email {'per@craft.se'}
+      sequence(:email) { |n| "user_#{n}@factory.com" }
     end
     factory :journalist do
       role { 1 }
-      email {'per@craft.se'}
-    end
+      sequence(:email) { |n| "user_#{n}@factory.com" }
+     end
   end
 end
